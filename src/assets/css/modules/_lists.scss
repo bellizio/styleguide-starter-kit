@@ -1,0 +1,88 @@
+ul,
+ol {
+  margin: $baseline 0;
+  padding-left: $baseline*2;
+}
+
+ul ul,
+ol ol {
+  margin: $sub-baseline 0;
+}
+
+.list--unstyled {
+  @include list('unstyled');
+
+}
+
+.list--inline {
+  @include list('inline');
+}
+
+/*doc
+---
+title: Lists
+name: lists
+category: Lists
+---
+
+### Unordered List
+
+```html_example
+<ul>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>
+    Integer molestie lorem at massa
+    <ul>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+    </ul>
+  </li>
+  <li>Vestibulum laoreet porttitor sem</li>
+</ul>
+```
+
+### Ordered List
+
+```html_example
+<ol>
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>
+    Integer molestie lorem at massa
+    <ol>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+    </ol>
+  </li>
+  <li>Vestibulum laoreet porttitor sem</li>
+</ol>
+```
+
+### Unstyled List
+
+```html_example
+<ul class="list--unstyled">
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>
+    Integer molestie lorem at massa
+    <ul>
+      <li>Facilisis in pretium nisl aliquet</li>
+      <li>Nulla volutpat aliquam velit</li>
+    </ul>
+  </li>
+  <li>Vestibulum laoreet porttitor sem</li>
+</ul>
+```
+
+### Inline List
+
+```html_example
+<ul class="list--inline">
+  <li>Lorem</li>
+  <li>Consectetur</li>
+  <li>Vestibulum</li>
+</ul>
+```
+*/

@@ -1,0 +1,175 @@
+%button {
+  @include transition(all 200ms ease-in-out);
+  @include button-color(palette(grey, dark));
+
+  border: none;
+  border-radius: $base-border-radius;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: $bold-font-weight;
+  height: $sub-baseline*6;
+  line-height: $sub-baseline*6;
+  margin: 0;
+  min-width: rem(100);
+  padding: 0 $baseline;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+%button-primary {
+  @include button-color(palette(blue));
+}
+
+%button-secondary {
+  @include button-color(palette(green));
+}
+
+%button-warning {
+  @include button-color(palette(yellow));
+}
+
+%button-destructive {
+  @include button-color(palette(red));
+}
+
+%button-disabled {
+  @include button-color(palette(grey, light), palette(grey));
+  cursor: not-allowed;
+}
+
+%button-small {
+  font-size: rem(14);
+  height: $baseline*2.5;
+  line-height: $baseline*2.5;
+  min-width: rem(50);
+}
+
+%button-full-width {
+  width: 100%;
+}
+
+#{$all-buttons} {
+  @extend %button;
+
+  &:disabled {
+    @extend %button-disabled;
+  }
+
+  &.back {
+    &::before {
+      @include triangle(rem(12), $white, left);
+      align-self: center;
+      content: '';
+      display: inline-block;
+      margin-right: $sub-baseline;
+    }
+  }
+
+  &.forward {
+    &::after {
+      @include triangle(rem(12), $white, right);
+      align-self: center;
+      content: '';
+      display: inline-block;
+      margin-left: $sub-baseline;
+    }
+  }
+}
+
+#{$all-buttons-focus},
+#{$all-buttons-hover} {
+  &:disabled {
+    background-color: palette(grey, light);
+    color: palette(grey, dark);
+  }
+}
+
+.button--primary {
+  @extend %button-primary;
+}
+
+.button--secondary {
+  @extend %button-secondary;
+}
+
+.button--warning {
+  @extend %button-warning;
+}
+
+.button--destructive {
+  @extend %button-destructive;
+}
+
+.button--small {
+  @extend %button-small;
+}
+
+.button--full-width {
+  @extend %button-full-width;
+}
+
+.button-group {
+  @include flex('wrap');
+
+  #{$all-buttons} {
+    margin-right: rem(12);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+/*doc
+---
+title: Buttons
+name: buttons
+category: Buttons
+---
+
+### Default Buttons
+
+```html_example
+<button type="button">Default Button</button>
+<button type="button" class="button--primary">Default Primary Button</button>
+<button type="button" class="button--secondary">Default Secondary Button</button>
+<button type="button" class="button--warning">Default Warning Button</button>
+<button type="button" class="button--destructive">Default Destructive Button</button>
+<button type="button" disabled>Default Disabled Button</button>
+```
+
+### Small Buttons
+
+```html_example
+<button type="button" class="button--small">Small Default Button</button>
+<button type="button" class="button--primary button--small">Small Primary Button</button>
+<button type="button" class="button--secondary button--small">Small Secondary Button</button>
+<button type="button" class="button--warning button--small">Small Warning Button</button>
+<button type="button" class="button--destructive button--small">Small Destructive Button</button>
+<button type="button" class="button--small" disabled>Small Disabled Button</button>
+```
+
+### Full Width Button
+
+```html_example
+<button type="button" class="button--secondary button--full-width">Full Width Button</button>
+```
+
+### Directional Buttons
+
+```html_example
+<button type="button" class="back">Back Button</button>
+<button type="button" class="button--primary forward">Forward Button</button>
+```
+
+### Button Groups
+
+```html_example
+<div class="button-group">
+  <button type="button">Default Button</button>
+  <button type="button" class="button--secondary">Default Button</button>
+</div>
+```
+*/

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      <%= @config['styleguide_name'] %>
+      <% if not title.to_s.strip.length == 0 %>
+        | <%= title %>
+      <% end %>
+    </title>
+    <!-- CSS includes -->
+    <% if @config['css_include'].to_s.strip.length != 0 %>
+      <% @config['css_include'].each do |css| %>
+        <link rel="stylesheet" href="<%= css %>">
+      <% end %>
+    <% end %>
+  </head>
+  <body>
+    <div class="flex-container">
+      <header class="styleguide-header">
+        <h1 class="masthead">
+          <a href="./">App Styleguide</a>
+        </h1>
+      </header>
+    </div>
+    <div class="flex-container">
+      <nav class="styleguide-nav">
+        <ul>
+          <% @categories.each do |category, file_name| %>
+            <li><a href="<%= file_name %>"><%= category %></a></li>
+          <% end %>
+        </ul>
+      </nav>
+      <section class="styleguide-body">
+        <% if @blocks.length > 1 %>
+          <ul class="sub-nav">
+            <% @blocks.each do |block| %>
+              <li><a href="#<%= block[:name] %>"><%= block[:title] %></a></li>
+            <% end %>
+          </ul>
+        <% end %>

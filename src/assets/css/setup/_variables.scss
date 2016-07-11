@@ -1,0 +1,77 @@
+// Used for consistent horizontal and vertical layout
+$sub-baseline: rem(6);
+$baseline: rem(12);
+
+// Typography
+$base-font-family: Helvetica, sans-serif;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-size: rem(16);
+
+// Font Weights
+$base-font-weight: 400;
+$bold-font-weight: 700;
+
+// Line Heights
+$base-line-height: 1.25;
+$heading-line-height: $base-line-height;
+
+// Colors
+$white: #fff;
+$black: #000;
+$palettes: (
+  blue: (
+    base: #39aefb,
+    light: lighten(#39aefb, 30%),
+    dark: darken(#39aefb, 30%)
+  ),
+  grey: (
+    base: #8e909c,
+    light: lighten(#8e909c, 35%),
+    dark: darken(#8e909c, 20%)
+  ),
+  green: (
+    base: #009e1d,
+    light: lighten(#009e1d, 30%),
+    dark: darken(#009e1d, 30%)
+  ),
+  red: (
+    base: #db504d,
+    light: lighten(#db504d, 30%),
+    dark: darken(#db504d, 30%)
+  ),
+  yellow: (
+    base: #d49a08,
+    light: lighten(#d49a08, 30%),
+    dark: darken(#d49a08, 30%)
+  )
+);
+
+// Borders
+$base-border-color: #8e909c;
+$base-border-radius: 3px;
+$base-border: 1px solid $base-border-color;
+
+// Box Shadows
+$box-shadow-focus: (
+  base:    0 0 12px adjust-color(#39aefb, $alpha: -0.6),
+  error:   0 0 12px adjust-color(#db504d, $alpha: -0.6),
+  success: 0 0 12px adjust-color(#009e1d, $alpha: -0.6)
+);
+
+// Breakpoints
+$screen            : 'only screen';
+$landscape         : '#{$screen} and (orientation: landscape)';
+$portrait          : '#{$screen} and (orientation: portrait)';
+$breakpoint-xsmall : '#{$screen} and (min-width: 320px)';
+$breakpoint-small  : '#{$screen} and (min-width: 640px)';
+$breakpoint-medium : '#{$screen} and (min-width: 768px)';
+$breakpoint-large  : '#{$screen} and (min-width: 1024px)';
+$breakpoint-xlarge : '#{$screen} and (min-width: 1440px)';
+$breakpoint-xxlarge: '#{$screen} and (min-width: 1920px)';
+
+// Font Icons
+$icons: (
+
+);

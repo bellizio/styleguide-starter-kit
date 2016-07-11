@@ -1,0 +1,117 @@
+// Block Element
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+// Block Modifier
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// Font Icon
+@mixin icon($icon, $position: before) {
+  @if $position == both {
+    $position: 'before, &::after';
+  }
+  // Either a ::before or ::after pseudo-element, or both, defaulting to ::before
+  &::#{$position} {
+    // Specified icon
+    content: '#{map-get($icons, $icon)}';
+    font-family: 'icon-font-family';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    speak: none;
+    text-transform: none;
+    // Any additional rules for the pseudo-element
+    @content;
+  }
+}
+
+// Button Color
+@mixin button-color($bg-color, $color: $white) {
+  background-color: $bg-color;
+  color: $color;
+
+  &:hover,
+  &:focus {
+    background-color: darken($bg-color, 10%);
+    color: $color;
+  }
+
+  &:focus {
+    box-shadow: 0 0 3px rgba(palette(grey, dark), .5);
+    outline: none;
+  }
+
+  &:active {
+    background-color: darken($bg-color, 20%);
+    color: $color;
+  }
+}
+
+// Flexbox
+@mixin flex($position: null) {
+  display: flex;
+
+  @if $position == 'wrap' {
+    flex-wrap: wrap;
+  }
+  @if $position == 'nowrap' {
+    flex-wrap: nowrap;
+  }
+  @if $position == 'wrap-reverse' {
+    flex-wrap: wrap-reverse;
+  }
+  @if $position == 'center' {
+    align-items: center;
+    justify-content: center;
+  }
+  @if $position == 'center-start' {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  @if $position == 'center-end' {
+    align-items: center;
+    justify-content: flex-end;
+  }
+  @if $position == 'center-space-between' {
+    align-items: center;
+    justify-content: space-between;
+  }
+  @if $position == 'start-space-between' {
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+// Lists
+@mixin list($type) {
+  @if $type == 'unstyled' {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+
+    ul,
+    ol {
+      list-style: none;
+    }
+  }
+
+  @if $type == 'inline' {
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      margin-left: $baseline;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

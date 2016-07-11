@@ -1,0 +1,53 @@
+.table-container {
+  border: $base-border;
+  border-radius: $base-border-radius;
+}
+
+.table-container__header,
+.table-container__footer {
+  @include flex(center);
+
+  height: $baseline*5;
+  padding: 0 $baseline*2;
+}
+
+/*doc
+---
+title: Tables
+name: tables
+category: Tables
+---
+
+### Default Table
+
+```html_example
+<div class="table-container">
+  <div class="table-container__header">Table Header</div>
+  <table>
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>23</td>
+        <td>John</td>
+        <td>Doe</td>
+        <td>@jdoe</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Walter</td>
+        <td>Smith</td>
+        <td>@wsm</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="table-container__footer">Table Footer</div>
+</div>
+```
+*/

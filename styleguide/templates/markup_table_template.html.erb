@@ -1,0 +1,23 @@
+<div class="code-example">
+  <table>
+    <tbody>
+      <% examples.each do |example| %>
+        <tr>
+          <th>
+            <div class="code-example__output">
+              <%= example.rendered_example %>
+            </div>
+          </th>
+          <td>
+            <div class="code-example__input">
+              <div class="highlight">
+                <pre><%= example.code_example %></pre>
+              </div>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+

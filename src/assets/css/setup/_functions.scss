@@ -1,0 +1,5 @@
+// Access colors in the $palettes map, with an optional tone parameter, defaulting to 'base'
+// ex. usage - color: pallete(blue, light)
+@function palette($palette, $tone: 'base') {
+  @return map-get(map-get($palettes, $palette), $tone);
+}

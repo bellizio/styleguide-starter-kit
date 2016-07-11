@@ -1,0 +1,43 @@
+{
+  "name": "styleguide-starter-kit",
+  "version": "1.0.0",
+  "description": "A styleguide starter kit, built with hologram",
+  "scripts": {
+    "postinstall": "bower install && bundle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bellizio/styleguide-starter-kit.git"
+  },
+  "keywords": [
+    "hologram",
+    "styleguide",
+    "gulp",
+    "front-end"
+  ],
+  "author": "Devon Bellizio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bellizio/styleguide-starter-kit/issues"
+  },
+  "homepage": "https://github.com/bellizio/styleguide-starter-kit#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "bower": "^1.7.7",
+    "browser-sync": "^2.11.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-hologram": "^1.2.0",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-size": "^2.0.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "run-sequence": "^1.1.5"
+  },
+  "engines": {
+    "node": ">=4.3.0"
+  }
+}

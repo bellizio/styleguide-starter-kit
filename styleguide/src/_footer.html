@@ -1,0 +1,15 @@
+      </section>
+    </div>
+    <div class="flex-container">
+      <footer class="styleguide-footer">
+        <p>This documentation is generated using <a href="http://github.com/trulia/hologram" target="_blank">Hologram</a>.</p>
+      </footer>
+    </div>
+    <!-- JS includes -->
+    <% if @config['js_include'].to_s.strip.length != 0 %>
+      <% @config['js_include'].each do |js| %>
+        <script type="text/javascript" src="<%= js %>"></script>
+      <% end %>
+    <% end %>
+  </body>
+</html>

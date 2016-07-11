@@ -1,0 +1,28 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+thead {
+  border-top: $base-border;
+  border-bottom: $base-border;
+}
+
+td,
+th {
+  padding: $baseline;
+}
+
+tr {
+  &:not(:last-of-type) {
+    border-bottom: $base-border;
+  }
+  &:last-of-type {
+    border-bottom: $base-border;
+  }
+}
+
+th {
+  text-align: left;
+}

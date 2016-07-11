@@ -1,0 +1,25 @@
+{
+  "name": "styleguide-starter-kit",
+  "description": "A styleguide starter kit, built with hologram",
+  "authors": [
+    "Devon Bellizio"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "hologram",
+    "styleguide",
+    "gulp",
+    "front-end"
+  ],
+  "homepage": "https://github.com/bellizio/styleguide-starter-kit",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "^4.2.7"
+  }
+}
