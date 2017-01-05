@@ -1,6 +1,3 @@
-[![Dependency Status](https://david-dm.org/bellizio/styleguide-starter-kit.svg)](https://david-dm.org/bellizio/styleguide-starter-kit)
-[![devDependency Status](https://david-dm.org/bellizio/styleguide-starter-kit/dev-status.svg)](https://david-dm.org/bellizio/styleguide-starter-kit#info=devDependencies)
-
 # Styleguide Starter Kit
 
 A simple styleguide starter kit built with [Hologram](http://trulia.github.io/hologram/).
